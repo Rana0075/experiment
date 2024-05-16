@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-a=pd.read_csv("train.csv")
+a=pd.read_csv("https://github.com/Rana0075/experiment/blob/main/train.csv")
 a['specialisation'] = a['specialisation'].map({'Mkt&HR': 1, 'Mkt&Fin': 0}) 
 a['degree_t'] = a['degree_t'].map({'Sci&Tech': 1, 'Comm&Mgmt': 2,'Others':0}) 
 a['hsc_s'] = a['hsc_s'].map({'Science': 1, 'Commerce': 2,'Arts':3}) 
