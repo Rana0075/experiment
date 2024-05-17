@@ -6,7 +6,7 @@ import warnings
 import pickle
 warnings.filterwarnings("ignore")
 
-data=pd.read_csv("D:/python/git/https-github.com-maanav69420-campus-placement-model/train.csv")
+data=pd.read_csv("D:/python/git/experiment/train.csv")
 c=['salary','sl_no','gender']
 data=data.drop(c,axis=1)
 
@@ -20,5 +20,4 @@ xtrain,xtest,ytrain,ytest=train_test_split(x,y,test_size=0.2 , random_state = 3)
 
 lda= LinearDiscriminantAnalysis()
 lda.fit(xtrain,ytrain)
-
-pickle.dump(lda.open('model.pkl','wb'))
+pickle.dump(lda,open('model.pkl','wb'))
